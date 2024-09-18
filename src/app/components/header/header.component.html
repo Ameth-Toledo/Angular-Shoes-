@@ -1,0 +1,33 @@
+<header class="header-shoes">
+    <!-- Menú de hamburguesa desplegable -->
+    <div class="menu-hamburguesa">
+      <i class="fas fa-bars icon" (click)="toggleMenu()"></i>
+      <nav class="menu-opciones" [class.show]="menuVisible">
+        <ul class="menu-opciones-ul">
+          <li class="menu-opciones-li">
+            <a href="#" class="menu-opciones-li-a">
+              <i class="fas fa-plus-circle icon"></i> Registrar Zapatos
+            </a>
+          </li>
+          <li class="menu-opciones-li">
+            <a href="#" class="menu-opciones-li-a">
+              <i class="fas fa-eye icon"></i> Ver Zapatos
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  
+    <!-- Logo de la empresa -->
+    <img src="Logo.png" alt="Logo de Dorikam" class="logo">
+  
+    <!-- Título de la empresa -->
+    <img src="DorikamName.png" alt="DorikamName.png" class="titulo">
+  
+    <!-- Campo de búsqueda con ícono de lupa -->
+    <div class="buscar-contenedor">
+      <input type="text" placeholder="Buscar" class="buscar-input">
+      <i class="fas fa-search icon"></i>
+    </div>
+  </header>
+  

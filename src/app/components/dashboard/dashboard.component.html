@@ -1,0 +1,66 @@
+<div class="grid-container">
+  <mat-card class="dashboard-card">
+    <mat-card-header>
+      <mat-card-title>
+        <h1>Hola, ¡Bienvenido!</h1> 
+        <h3>porfavor llena los datos</h3> 
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content class="dashboard-card-content">
+      <!-- Aqui pal Formulario -->
+      <form (ngSubmit)="agregarZapato()">
+        <label for="text">ingrese el id</label>
+        <input type="text" placeholder="Ingrese el Id" [(ngModel)]="nuevoZapato.id" name="id" required>
+        <label for="text">ingrese el nombre</label>
+        <input type="text" placeholder="Ingrese el nombre" [(ngModel)]="nuevoZapato.name" name="name" required>
+        <label for="text">ingrese la talla</label>
+        <input type="text" placeholder="Ingrese la talla" [(ngModel)]="nuevoZapato.size" name="size" required>
+        <label for="text">ingrese la marca</label>
+        <input type="text" placeholder="Ingrese la marca" [(ngModel)]="nuevoZapato.brand" name="brand" required>
+        <label for="text">ingrese el precio</label>
+        <input type="text" placeholder="Ingrese el precio" [(ngModel)]="nuevoZapato.price" name="price" required>
+        <label for="text">ingrese las sucursales en la que esta disponible</label>
+        <!-- Input de sucursales -->
+        <input type="text" placeholder="Ingrese las sucursales disponibles, separadas por comas" [(ngModel)]="sucursalesString" name="branches" required>
+      
+        <button type="submit">Agregar Zapato</button>
+      </form>
+      
+
+      <table>
+        @for (elementsShoes of branchesArray; track elementsShoes) {
+          <div class="mostrar-elementos">
+            <h6 class="detalles-h6">Detalles</h6>
+            <div class="detalle-item">
+              <strong class="detalle-item-strong">Nombre:</strong>
+              <div class="detalle-item-div">{{elementsShoes.name}}</div>
+            </div>
+            <div class="detalle-item">
+              <strong class="detalle-item-strong">Id:</strong>
+              <div class="detalle-item-div">{{elementsShoes.id}}</div>
+            </div>
+            <div class="detalle-item">
+              <strong class="detalle-item-strong">Talla:</strong>
+              <div class="detalle-item-div">{{elementsShoes.size}}</div>
+            </div>
+            <div class="detalle-item">
+              <strong class="detalle-item-strong">Marca:</strong>
+              <div class="detalle-item-div">{{elementsShoes.brand}}</div>
+            </div>
+            <div class="detalle-item">
+              <strong class="detalle-item-strong">Precio:</strong>
+              <p class="pesos">$</p>
+              <div class="detalle-item-div">{{elementsShoes.price}}</div>
+            </div>
+            <div class="detalle-item">
+              <strong class="detalle-item-strong">Sucursales:</strong>
+              <div class="detalle-item-div">{{elementsShoes.branches}}</div>
+            </div>
+          </div>
+        }
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>
+<!--ojala jaleee :(( -->
