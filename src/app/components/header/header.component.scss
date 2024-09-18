@@ -68,12 +68,12 @@
 .logo {
   height: 50px;
   object-fit: contain;
+  margin-right: -20px; /* Añadir espacio entre el logo y el título */
 }
 
 .titulo {
   height: 50px;
   object-fit: contain;
-  margin: 0 20px;
 }
 
 .buscar-contenedor {
